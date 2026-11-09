@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#245ee9">
+  <title>연락톡 · 놓치지 않는 업무의 시작</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%232861e9'/%3E%3Cpath d='M9 9h14v12H13l-4 3V9Z' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#dashboard"><span class="brand-mark" data-icon="message"></span><span>연락톡<small>CONTACT TALK</small></span></a>
+    <div class="workspace"><span class="workspace-icon">W</span><div>나의 워크스페이스<small>개인 업무 공간</small></div><span data-icon="chevrons"></span></div>
+    <p class="nav-label">WORKSPACE</p>
+    <nav aria-label="주 메뉴">
+      <a href="#dashboard" data-page="dashboard"><span data-icon="grid"></span>대시보드</a>
+      <a href="#contacts" data-page="contacts"><span data-icon="users"></span>거래처 관리<span class="nav-count" id="contact-count"></span></a>
+      <a href="#tasks" data-page="tasks"><span data-icon="check-square"></span>업무 관리<span class="nav-dot"></span></a>
+      <a href="#history" data-page="history"><span data-icon="history"></span>연락 내역</a>
+      <div class="nav-divider"></div>
+      <a href="#vault" data-page="vault"><span data-icon="lock"></span>비밀 보관함<span class="private-tag">PRIVATE</span></a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="sidebar-tip"><span data-icon="sparkles"></span><strong>작은 연락이 만드는 큰 기회</strong><p>연락톡과 함께 중요한 순간을<br>놓치지 마세요.</p><span class="tip-line"></span></div>
+      <button class="help-button" id="help-button"><span data-icon="help"></span>이용 안내<span data-icon="external"></span></button>
+      <div class="profile"><span class="avatar">나</span><div>나의 계정<small>데모 워크스페이스</small></div><span class="online-dot"></span></div>
+    </div>
+  </aside>
+  <div class="mobile-backdrop" id="mobile-backdrop" hidden></div>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="breadcrumb"><button class="icon-button menu-button" id="menu-button" aria-label="메뉴 열기" aria-expanded="false"><span data-icon="menu"></span></button><span class="breadcrumb-home" data-icon="home"></span><span class="slash">/</span><span id="breadcrumb-title">대시보드</span></div>
+      <div class="topbar-actions"><span class="demo-pill"><i></i>데모 모드</span><span class="topbar-divider"></span><button class="icon-button notification-button" id="notification-button" aria-label="오늘의 업무 알림"><span data-icon="bell"></span><i></i></button><span class="avatar small">나</span></div>
+    </header>
+    <main id="main-content"></main>
+    <footer><span><span class="footer-dot"></span>모든 데이터는 가상 데이터입니다. 실제 개인정보를 입력하지 마세요.</span><span>Contact Talk © 2026</span></footer>
+  </div>
+  <dialog id="form-dialog"><div class="dialog-heading"><h2 id="dialog-title"></h2><button class="icon-button" id="close-dialog" aria-label="닫기"><span data-icon="x"></span></button></div><div id="dialog-body"></div></dialog>
+  <div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>
